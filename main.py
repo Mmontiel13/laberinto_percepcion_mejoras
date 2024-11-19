@@ -117,9 +117,7 @@ while run:
     screen.fill(BLACK)
 
     # Mostrar el contador de monedas en pantalla
-    # coin_text = font.render(f"Monedas: {coins_collected}/{coin_count}", True, WHITE)
     draw_coin_counter(screen, coins_collected, coin_count)
-    # screen.blit(coin_text, (10, 10))
 
     # Obtener el estado de las teclas
     keys = pygame.key.get_pressed()
@@ -197,6 +195,9 @@ while run:
     for npc in npc_list:
         npc.draw(screen)
     player.draw(screen)
+
+    # Mostrar el contador de monedas en pantalla
+    draw_coin_counter(screen, coins_collected, coin_count)
 
     # Manejar eventos
     for event in pygame.event.get():
